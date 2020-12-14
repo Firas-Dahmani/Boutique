@@ -1,0 +1,14 @@
+<div class="rowml-5" >
+    <div class="col-md" >
+        <div class="image">
+            <a href="#">
+                <img [src]='pr.image' class="w-100">
+                <div class="overlay">
+                    <div class="detail" *ngIf="pr.description">View Details</div>
+                </div>
+            </a>
+        </div>
+        <h5 class="text-center">{{pr.nom}}</h5>
+        <h5 class="text-center">Price: {{pr.prix}}</h5>
+    </div>
+</div>
