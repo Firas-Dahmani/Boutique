@@ -1,0 +1,20 @@
+<h1 class="text-center">{{title}}</h1>
+<hr>
+<div class="container d-flex flex-row justify-content-between">
+    <div class="row card-deck ml-5" >
+        <div class="col-md-4 product-grid" *ngFor="let prod of produits">
+            <div class="image">
+                <a href="#">
+                    <img [src]='prod.image' class="w-100">
+                    <div class="overlay">
+                        <div class="detail" *ngIf="prod.description" (click)="afficheDet(prod)">View Details</div>
+                    </div>
+                </a>
+            </div>
+            <h5 class="text-center">{{prod.nom}}</h5>
+            <h5 class="text-center">Price: {{prod.prix}}</h5>
+            <a href="#" class="btn buy">BUY</a>
+        </div>
+    </div>
+    <app-home-product-details></app-home-product-details>
+</div>

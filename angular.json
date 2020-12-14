@@ -52,6 +52,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -148,5 +149,8 @@
       }
     }
   },
-  "defaultProject": "Boutique"
+  "defaultProject": "Boutique",
+  "cli": {
+    "analytics": "740821b1-65b7-4936-97de-ff7f593fadd9"
+  }
 }
