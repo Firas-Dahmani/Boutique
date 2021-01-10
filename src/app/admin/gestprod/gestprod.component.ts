@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-gestprod',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gestprod.component.css']
 })
 export class GestprodComponent implements OnInit {
-
-  constructor() { }
+  productAddForm!: FormGroup;
+  constructor(private fb: FormBuilder) { } 
 
   ngOnInit(): void {
+    this. productAddForm = this.fb.group ({
+      nameControl: ['firas']
+      }); 
+  }
+
+  onAjouter(){
+    alert(JSON.stringify(this.productAddForm.value))
   }
 
 }

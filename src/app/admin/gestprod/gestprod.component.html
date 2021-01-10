@@ -1,1 +1,20 @@
-<p>gestprod works!</p>
+<h1>Formulaire</h1>
+<form [formGroup]="productAddForm"  (ngSubmit)="onAjouter()">
+<div>
+    <label>Nom Produit</label>
+    <input type="text"  formControlName="nameControl" >
+</div>
+<div>
+    <label>Prix</label>
+    <input type="text">
+</div>
+
+<div>
+    <label>Description</label>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+</div>
+
+<div>
+    <button type="submit">Ajouter</button>
+</div>
+</form>

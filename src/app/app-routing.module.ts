@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
+import { GestprodComponent } from './admin/gestprod/gestprod.component';
 import { HomeadmComponent } from './admin/homeadm/homeadm.component';
 import { AboutComponent } from './client/about/about.component';
 import { ClientComponent } from './client/client.component';
@@ -15,7 +17,14 @@ const routes: Routes = [
       {path:'about', component:AboutComponent},
     ],
   },
-  {path:'admin', component:HomeadmComponent},
+  {
+    path:'', 
+    component:AdminComponent,
+    children:[
+      {path:'homeadm', component:HomeadmComponent},
+      {path:'gestprod', component:GestprodComponent}
+    ]
+  },
   {path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: '**', component: PageNotFoundComponent}
 ];
